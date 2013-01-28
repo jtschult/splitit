@@ -1,0 +1,58 @@
+<!DOCTYPE HTML> 
+<html>
+	<head>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="js/navigator.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/navigator.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">
+	</head>
+	<body>
+		<div id="pages">
+			<div id="home">
+				<div class="header">Buona Tavola</div>
+				<div class="content">
+					<div id="total">
+						<span id="diner_items">0</span>
+						 items + 
+						<span id="diner_tax">$0.00</span>
+						(tax) = 
+						<span id="diner_total">$0.00</span>
+					</div>
+					<div id="receipt">
+						<div class="receipt_row">
+							<span class="receipt_item">Parma Pasta</span>
+							<span class="receipt_price">$5.90</span>
+						</div>
+						<div class="receipt_row">
+							<span class="receipt_item">Pepperoni Pizza</span>
+							<span class="receipt_price">$5.90</span>
+						</div>
+						<div class="receipt_row">
+							<span class="receipt_item">Beer</span>
+							<span class="receipt_price">$5.90</span>
+						</div>
+						<div class="receipt_row">
+							<span class="receipt_item">Coke</span>
+							<span class="receipt_price">$5.90</span>
+						</div>
+						<div class="receipt_row">
+							<span class="receipt_item">Dessert Sticks</span>
+							<span class="receipt_price">$5.90</span>
+						</div>
+					</div>
+					<div id="receipt_bottom"></div>
+				</div>
+				<div class="footer">
+					<div>
+						<a href="#" id="doneLink" class="inactive" onclick="dinerDone()">Split</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var nav = new Navigator(document.getElementById("pages"),{"initPage":"home"});
+		</script>
+	</body>
+</html>
