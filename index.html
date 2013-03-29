@@ -8,8 +8,6 @@
 		<link rel="stylesheet" href="css/navigator.css" type="text/css" media="screen" charset="utf-8">
 		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">
 		<style>
-
-		/* Swipe 2 required styles */
 		body {
 		  	-webkit-text-size-adjust:none;
 		  	font-family:sans-serif;
@@ -20,15 +18,10 @@
 		  background: #f3f3f3;
 		}
 
-		#mySwipe div span {
+		#mySwipe div .page {
 		  display:block;
-		  font-weight:bold;
-		  color:#14ADE5;
-		  font-size:20px;
-		  text-align:center;
-		  padding:100px 10px;
+		  padding:50px 0px;
 		  box-shadow: 0 1px #EBEBEB;
-		  background: #fff;
 		  border: 1px solid;
 		  border-color: #E5E5E5 #D3D3D3 #B9C1C6;
 		}
@@ -47,70 +40,64 @@
 		  width:100%;
 		  position: relative;
 		}
-
-
-
-		/* END required styles */
-
 		</style>
 	</head>
 	<body>
-		<div id="pages">
-			<div id="home">
-				<div class="header">Buona Tavola</div>
-				<div class="content">
-					<div id='mySwipe' style='width:100%' class='swipe'>
-					  <div class='swipe-wrap'>
-					    <div><span>0</span></div>
-					    <div><span>1</span></div>
-					  </div>
-					</div>
-					
-					
-					<!--div id="total">
-						<span id="diner_items">0</span>
-						 items + 
-						<span id="diner_tax">$0.00</span>
-						(tax) = 
-						<span id="diner_total">$0.00</span>
-					</div>
-					<div id="receipt">
-						<div class="receipt_row">
-							<span class="receipt_item">Parma Pasta</span>
-							<span class="receipt_price">$5.90</span>
+		<div id='mySwipe' style='width:100%' class='swipe'>
+			  <div class='swipe-wrap'>
+			    <div>
+					<span class="page">
+						<div id="home">
+							<div class="header">Buona Tavola</div>
+							<div class="content">
+								<div id="total">
+									<span id="diner_items">0</span>
+									 items + 
+									<span id="diner_tax">$0.00</span>
+									(tax) = 
+									<span id="diner_total">$0.00</span>
+								</div>
+								<div id="receipt">
+									<div class="receipt_row">
+										<span class="receipt_item">Parma Pasta</span>
+										<span class="receipt_price">$5.90</span>
+									</div>
+									<div class="receipt_row">
+										<span class="receipt_item">Pepperoni Pizza</span>
+										<span class="receipt_price">$5.90</span>
+									</div>
+									<div class="receipt_row">
+										<span class="receipt_item">Beer</span>
+										<span class="receipt_price">$5.90</span>
+									</div>
+									<div class="receipt_row">
+										<span class="receipt_item">Coke</span>
+										<span class="receipt_price">$5.90</span>
+									</div>
+									<div class="receipt_row">
+										<span class="receipt_item">Dessert Sticks</span>
+										<span class="receipt_price">$5.90</span>
+									</div>
+								</div>
+								<div id="receipt_bottom"></div>
+							</div>
+							<div class="footer">
+								<div>
+									<a href="#" id="doneLink" class="inactive" onclick="dinerDone()">Split</a>
+								</div>
+							</div>
 						</div>
-						<div class="receipt_row">
-							<span class="receipt_item">Pepperoni Pizza</span>
-							<span class="receipt_price">$5.90</span>
-						</div>
-						<div class="receipt_row">
-							<span class="receipt_item">Beer</span>
-							<span class="receipt_price">$5.90</span>
-						</div>
-						<div class="receipt_row">
-							<span class="receipt_item">Coke</span>
-							<span class="receipt_price">$5.90</span>
-						</div>
-						<div class="receipt_row">
-							<span class="receipt_item">Dessert Sticks</span>
-							<span class="receipt_price">$5.90</span>
-						</div>
-					</div>
-					<div id="receipt_bottom"></div-->
+					</span>
 				</div>
-				<div class="footer">
-					<div>
-						<a href="#" id="doneLink" class="inactive" onclick="dinerDone()">Split</a>
-					</div>
+		    	<div>
+					<span class="page">1</span>
 				</div>
+			  </div>
 			</div>
-		</div>
 		<script src='js/swipe.js'></script>
 		<script>
 			var elem = document.getElementById('mySwipe');
 			window.mySwipe = Swipe(elem,{});
-			
-			var nav = new Navigator(document.getElementById("pages"),{"initPage":"home"});
 		</script>
 	</body>
 </html>
